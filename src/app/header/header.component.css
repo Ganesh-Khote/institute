@@ -1,0 +1,201 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Utility Classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Sub Header */
+.sub-header {
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.sub-header .left-content p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.sub-header .right-icons ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.sub-header .right-icons ul  a {
+  /* color: #555; */
+  /* #6c757d */
+  color: #744949;
+  text-decoration-line: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+
+}
+
+.sub-header .right-icons ul  a:hover {
+  color: #f0772b;
+}
+
+/* Header Area */
+.header-area {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-area .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-area .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0275d8;
+  text-decoration: none;
+}
+
+.header-area .nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-area .nav li {
+  position: relative;
+}
+
+.header-area .nav li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header-area .navbar-nav li a:hover,
+.header-area .nav li a.active {
+  /* color: #0275d8; */
+  color: #f0772b;
+}
+
+.header-area .has-sub .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  z-index: 5;
+}
+
+.header-area .has-sub:hover .sub-menu {
+  display: block;
+}
+
+.header-area .sub-menu li {
+  padding: 5px 20px;
+}
+
+.header-area .sub-menu li a {
+  color: #555;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.header-area .sub-menu li a:hover {
+  color: #0275d8;
+}
+
+/* Mobile Menu Trigger */
+.menu-trigger {
+  display: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-area .nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+  }
+
+  .header-area .nav.active {
+    display: flex;
+  }
+
+  .menu-trigger {
+    display: block;
+  }
+}
+
+/* Make sure the header sticks to the top */
+.header-area {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Ensures the navbar doesn't stretch too much on large screens */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+
